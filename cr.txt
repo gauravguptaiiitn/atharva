@@ -1,0 +1,148 @@
+G A U R A V   G U P T A
+BT22CSH038
+CP ASSIGNMENT
+
+Question 1
+
+#include<stdio.h>
+int main()
+{
+    int total_popu=80000,total_men,total_women,literate_men,literate_women,total_literate,illiterate_men,illiterate_women;
+    total_men=0.52*80000;
+    total_women=80000-(0.52*80000);
+    literate_men=0.35*total_men;
+    total_literate=0.48*80000;
+    literate_women=total_literate-literate_men;
+    illiterate_men=total_men-literate_men;
+    illiterate_women=total_women-literate_women;
+    printf("total population=%d\n",total_popu);
+    printf("total men population=%d\n",total_men);
+    printf("total women population=%d\n",total_women);
+    printf("total literate men population=%d\n",literate_men);
+    printf("total literate women population=%d\n",literate_women);
+    printf("total illiterate men population=%d\n",illiterate_men);
+    printf("total illiterate women population=%d\n",illiterate_women);
+return 0;
+}
+
+
+
+Question 2
+#include<stdio.h>
+int main()
+{
+   
+    int hundred_notes,fifty_notes,ten_notes,sum,remainder_100,remainder_50,amt;
+printf("enter the amount you want to withdraw in hundreds denominations available are 10,50,100");
+scanf("%d",&amt); 
+hundred_notes=amt/100;
+remainder_100=amt%100;
+fifty_notes=remainder_100/50;
+remainder_50=remainder_100%50;
+ten_notes=remainder_50/10;
+sum=hundred_notes+fifty_notes+ten_notes;
+printf("number of 100 rupees notes=%d",hundred_notes);
+printf("number of 50 rupees notes=%d",fifty_notes);
+printf("number of 10rupees notes=%d",ten_notes);
+printf("total number of notes=%d",sum);
+return 0;
+}
+
+
+
+Question 3
+
+
+#include<stdio.h>
+int main()
+{
+    float tsp,tpro,cp_one,sp_one,profit_one;
+    printf("enter total selling price of 15 items");
+scanf("%f",&tsp);
+    printf("enter total profit earned on the 15 items");
+    scanf("%f",&tpro);
+    sp_one=tsp/15;
+    profit_one=tpro/15;
+    cp_one=sp_one-profit_one;
+ printf("cost price of one item=%f",cp_one);
+return 0;
+
+
+
+Question 4
+
+
+#include<stdio.h>
+ int main()
+ { 
+ int age; 
+ char health,living,gender;
+ printf("enter your age"); 
+ scanf("%d",&age); 
+ if(age>25&&age<35)
+{ 
+ printf("press 'm' if male and 'f' if female\n");
+ scanf(" %c",&gender);
+ printf("press'c' if living in city and 'v' if living in village\n");
+ scanf(" %c",&living);
+ printf("press 'u' if unhealthy and 'h' if healthy\n");
+ scanf(" %c",&health);
+ if(health=='h'&&gender=='m'&&living=='c')
+{ 
+ printf("You are eligible for insurance at premium of Rs4 per thousand and your policy amount should not exceed Rs2 lakhs");
+} 
+ else if(health=='h'&&gender=='f'&&living=='c')
+{ 
+ printf("You are eligible for insurance at premium of Rs3 per thousand and your policy amount should not exceed Rs1 lakh");
+}
+ else if(health=='u'&&gender=='m'&&living=='v')
+{
+ printf("You are eligible for insurance at premium of Rs6 per thousand and your policy amount should not exceed Rs10,000");
+}
+ else
+{
+printf("sorry no insurance for yoour category");
+}
+  return 0;
+}
+ }
+
+
+Question 5
+
+#include<stdio.h> 
+int main()
+ {
+ int class,fail;
+  printf("enter 1 if you belong to  first class,2 if you belong to second class and 3 if you belong to third class.\n"); 
+  scanf("%d",&class); 
+  printf("enter the number of subjects you have failed \n");
+   scanf("%d",&fail);
+    switch(class)
+    {
+     case 1:
+     if(fail >3) 
+     printf("you get no grace marks.");
+      else 
+      printf("you get 5 grace marks per subjects.");
+      break;
+      
+       case 2:
+       
+        if(fail >2)
+         printf("you get no grace marks.");
+         else 
+         printf("you get 4 grace marks per subjects.");
+         break;
+         
+          case 3:
+          
+          if(fail >1) 
+          printf("you get no grace marks.");
+           else 
+           printf("you get 5 grace marks.");
+         
+           default:printf("wrong input");
+           } 
+           return 0;
+            }
